@@ -20,7 +20,7 @@ This repository contains the PI project, taught by [João Cardoso](https://sigar
 
 - [Meetings](/docs/Meetings.md)
 - [Requirements](/docs/Requirements.md)
-- [Report](/docs/finalreport.pdf)
+- [Poster](/docs/Poster.pdf)
 
 ## How to put everything running
 ### __Raspberrypi Initializations__
