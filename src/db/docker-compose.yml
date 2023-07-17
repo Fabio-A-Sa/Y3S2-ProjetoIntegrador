@@ -1,0 +1,39 @@
+version: '3.3'
+
+services:
+  influxdb:
+    image: arm64v8/influxdb:latest
+    ports:
+      - '8086:8086'
+    volumes:
+      - influxdb-storage:/var/lib/influxdb
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=123456789
+      - DOCKER_INFLUXDB_INIT_ORG=pe51
+      - DOCKER_INFLUXDB_INIT_BUCKET=sadas-dei
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=sadastoken
+
+  telegraf:
+    image: arm64v8/telegraf:latest
+    depends_on:
+      - influxdb
+    volumes:
+      # Mount for telegraf config
+      - ./telegraf.conf:/etc/telegraf/telegraf.conf
+
+  mosquitto:
+    image: arm64v8/eclipse-mosquitto:latest
+    network_mode: host
+    volumes:
+      - ./config/:/mosquitto/config/:rw
+      - ./log/:/mosquitto/log/
+      - data:/mosquitto/data/
+    ports:
+      - 1883:1883
+      - 9001:9001
+
+volumes:
+    influxdb-storage:
+    data: ~

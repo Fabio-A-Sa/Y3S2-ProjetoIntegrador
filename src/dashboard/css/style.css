@@ -1,0 +1,148 @@
+/* This is a comment in CSS. */
+
+/* Reset default margin and padding for all elements. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include border and padding in element's total width and height. */
+}
+
+/* Set default font size and color for all text. */
+body {
+  font-size: 0.75em;
+  background-color: rgb(199, 199, 199);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100vh; /* Maximum height of 100vh */
+  overflow: hidden; /* Prevent any overflow */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style headings. */
+h1 {
+  font-size: 1.75em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size:1.65em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+hr {
+  margin-top: 1em;
+}
+
+/* Style links. */
+a {
+  color: #007bff; /* Blue color for links. */
+  text-decoration: none; /* Remove underline from links. */
+}
+
+a:hover {
+  text-decoration: underline; /* Add underline on hover. */
+}
+
+/*Header Style*/
+header {
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(115, 36, 21);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+  
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+  
+nav li {
+  margin-left: 30px;
+}
+  
+nav a {
+  color: #fff;
+  font-size: 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in-out;
+}
+  
+nav a:hover {
+  color: #ccc;
+}
+
+/*The Bottom part contains the left table set, the footer video and the right table set*/
+.bottom-part{
+  display: flex;
+  flex-direction: row;
+  overflow: hidden; /* Prevent any overflow */
+}
+
+.footer-video {
+  position: relative;
+  width: 70%;
+  padding-top: 39.375%; /* 16:9 aspect ratio (9 / 16 = 0.5625 or 56.25%) */
+  background-color: #33333333;
+  overflow: hidden; /* Prevent any overflow */
+}
+
+.footer-video::before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* Maintain a 1:1 aspect ratio for the pseudo-element */
+}
+
+.footer-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*It contains the Time that is being displayed*/
+.timer {
+  font-size: 2em;
+  color: #333;
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em; 
+}
+
+.buttons {
+  display: flex;
+  padding: 0.25em;
+  justify-content: space-between;
+}
+
+/*Add and Remove Tables buttons on the Header */
+.add-table, .remove-table  {
+  display: flex;
+  flex-grow: 1 1 0px;
+  border: 1px solid #000;
+  cursor: pointer;
+  padding: .5em 2em;
+  border-radius: 0.25em;
+  border: none;
+  display: inline-block;
+  font-size: 1em;
+  box-sizing: content-box;
+  margin-left: 20px;
+}
+
+.add-table:hover, .remove-table:hover {
+  background-color: #deab3c74;
+}

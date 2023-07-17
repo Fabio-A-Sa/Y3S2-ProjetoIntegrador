@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DEI - Availability</title>
+        <script src="./js/main.js" defer></script>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/tables.css">
+        <link rel="stylesheet" href="./css/modal.css">
+        <link rel="icon" href="favicon.ico">
+    </head>
+    <body>
+      <header>
+          <h2>Secretaria DEI</h2>
+          <nav id="links">
+            <ul>
+              <li>
+                <section class="buttons">
+                  <button class="add-table">+ Add Table</button>
+                  <button class="remove-table">- Remove Table</button>
+                </section>
+              </li>
+              <li><h3>Email:</h3></li>
+              <li><h3>secdei@fe.up.pt</h3></li>
+            </ul>
+          </nav>
+      </header>
+      
+      <section class="table-set table-set-center">
+        <div id="modal" style="display: none;">
+          <form id="table-form">
+            <h3>New Table</h3>
+            <div id="courses-container">
+              <div class="course">
+                <label for="course-name">Type of Service Offered:</label>
+                <input type="text" class="course-name" name="course-name">
+                <button type="button" class="remove-course-btn">-</button>
+              </div>
+            </div>
+            <button type="button" id="add-course-btn">+ Course</button>
+            <hr>
+            <div class="attendant">
+              <label for="attendant-name">Attendant Name:</label>
+              <input type="text" class="attendant-name" name="attendant-name">
+            </div>
+            <div class="mac-address">
+              <label for="mac-address">Mac Address:</label>
+              <input type="text" class="mac-address-input" name="mac-address">
+            </div>
+            <div class="table-location">
+              <label for="table-location">Table Location:</label>
+              <div class="location-buttons">
+                  <button type="button" class="location-btn" data-location="left">Left</button>
+                  <button type="button" class="location-btn selected" data-location="center">Center</button>
+                  <button type="button" class="location-btn" data-location="right">Right</button>
+              </div>
+          </div>
+            <div class="modal-buttons">
+              <button type="submit" id="save-table-btn">Add Table</button>
+              <button type="button" id="cancel-btn">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      
+      <section  class="bottom-part"> 
+        <div class="table-set-left"></div>
+        <section class="footer-video"></section>
+        <div class="table-set-right"></div>
+      </section>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+/*
+    It contains all the style for the table sets, table containers and their components
+*/
+.table-set {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px 75px;
+    position: relative;
+}
+
+.table-set-center {
+    width: 100%;
+    min-height: 28vh;
+    height: fit-content;
+}
+
+.table-set-left, .table-set-right {
+    height: fit-content;
+    width: 15%;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+}
+
+.table-set-left .table-container{
+    transform: rotate(-90deg);
+}
+
+.table-set-right .table-container{
+    transform: rotate(90deg);
+}
+
+.table-container {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.courses-container {
+    padding: 10px;
+    color: #333;
+}
+
+.chair {
+    width: 75px;
+    height: 40px;
+    background-color: #deab3c;
+    border: 1px solid #000;
+    border-radius: 30% 30% 0% 0%;
+    margin: 5px;
+}
+
+.table {
+    width: 150px;
+    height: 90px;
+    background-color: #deab3c;
+    border: 1px solid #000;
+    border-radius: 25px;
+}
+
+.status-container {
+    padding: 10px;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.table.Disponivel, .chair.Disponivel {
+    background-color: green;
+}
+.table.Indisponivel, .chair.Indisponivel{
+    background-color: red;
+}
+.table.Ausente, .chair.Ausente {
+    background-color: yellow;
+}
+.table.Closed, .chair.Closed {
+    background-color: grey;
+}
+.table.Default, .chair.Default {
+    background-color: #add8e6;
+}
+  
+  

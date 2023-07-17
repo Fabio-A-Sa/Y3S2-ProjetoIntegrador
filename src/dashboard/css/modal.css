@@ -1,0 +1,102 @@
+/*
+    All the Modal items are in this file
+    It styles the modal display
+    Labels, inputs and buttons
+*/
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#modal form {
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#modal label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#modal input {
+    display: block;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#modal button {
+    padding: 5px 10px;
+    background-color: #494949;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#modal button:hover {
+    background-color: #deab3c74;
+}
+
+#modal button.selected {
+    background-color: #deab3c74;
+    font-weight: bold;
+}
+
+.course, .attendant, .mac-address, .table-location{
+    font-size: medium;
+    position: relative;
+    background-color: #414141;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Location Buttons */
+.location-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.location-btn {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
+#add-course-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.remove-course-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+  
